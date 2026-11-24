@@ -8,8 +8,8 @@ export function validatePluginManifest(manifest) {
   if (typeof manifest.id !== "string" || !idPattern.test(manifest.id)) {
     errors.push("id must be kebab-case (alphanumeric with hyphens/underscores)");
   }
-  if (typeof manifest.name !== "string" || manifest.name.trim().length === 0) {
-    errors.push("name is required");
+  if (manifest.name !== undefined && (typeof manifest.name !== "string" || manifest.name.trim().length === 0)) {
+    errors.push("name must be a non-empty string when present");
   }
   if (manifest.version !== undefined && (typeof manifest.version !== "string" || !/^\d+\.\d+\.\d+/.test(manifest.version))) {
     errors.push("version must be semver-like when present");
