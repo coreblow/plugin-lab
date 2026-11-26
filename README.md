@@ -1,3 +1,5 @@
+> **Archive Notice:** Manifest contract validation now lives in [coreblow/coreblow](https://github.com/coreblow/coreblow) and this repository has been archived.
+
 # Plugin Lab
 
 Compatibility testbed for CoreBlow community plugins and plugin seams.
